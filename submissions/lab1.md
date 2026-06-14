@@ -1,13 +1,12 @@
 # Lab 1 submission
 
-i@is-MacBook-Air ~ % ssh -T git@githb.com
-^C
-i@is-MacBook-Air ~ % curl -s http://localhost:8080/health | python3 -m json.tool
+ % ssh -T git@githb.com
+ % curl -s http://localhost:8080/health | python3 -m json.tool
 {
     "notes": 4,
     "status": "ok"
 }
-i@is-MacBook-Air ~ % curl -s http://localhost:8080/notes  | python3 -m json.tool
+ curl -s http://localhost:8080/notes  | python3 -m json.tool
 [
     {
         "id": 4,
@@ -34,7 +33,7 @@ i@is-MacBook-Air ~ % curl -s http://localhost:8080/notes  | python3 -m json.tool
         "created_at": "2026-01-15T10:10:00Z"
     }
 ]
-i@is-MacBook-Air ~ % curl -s -X POST http://localhost:8080/notes \
+ ~ % curl -s -X POST http://localhost:8080/notes \
   -H 'Content-Type: application/json' \
   -d '{"title":"hello","body":"first POST"}' | python3 -m json.tool
 {
@@ -44,3 +43,8 @@ i@is-MacBook-Air ~ % curl -s -X POST http://localhost:8080/notes \
     "created_at": "2026-06-14T11:29:02.00957Z"
 }
 
+## GitHub Community
+
+Starring repositories helps developers bookmark useful projects and signals interest and trust in open-source work. It also increases visibility for maintainers and contributes to project growth.
+
+Following developers helps me track activity, discover new tools, and stay connected with peers for collaboration in future projects and team environments.
