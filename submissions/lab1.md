@@ -53,7 +53,7 @@ EVERYONE FOLLOWED
 ## GitHub Community
 
 Starring repositories helps developers bookmark useful projects and signals interest and trust in open-source work. It also increases visibility for maintainers and contributes to project growth.
-
+Í
 Following developers helps me track activity, discover new tools, and stay connected with peers for collaboration in future projects and team environments.
 
 BONUS
