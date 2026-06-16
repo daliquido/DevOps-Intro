@@ -102,3 +102,51 @@ permissions:
  contents: read
 ### e) GitLab difference between stage and job?
 Stages define execution order, jobs are units of work. dependencies controls artifact flow, not execution order.
+
+| Scenario | Wall-clock |
+|----------|------------|
+| Baseline (no cache, single Go version, no path filter) | 78s |
+| With cache | 74s |
+| With cache + matrix | 120s |
+
+Optimizations Applied (description only)
+
+1. Go caching
+
+Enabled actions/setup-go cache feature to reuse downloaded modules and build artifacts across CI runs. This reduces repeated dependency resolution work.
+
+2. Build matrix (Go 1.23 + 1.24)
+
+Introduced a matrix strategy to run vet and test against multiple Go versions in parallel. This ensures compatibility across toolchains and prevents version-specific bugs.
+
+3. Path filtering
+
+Restricted CI execution to only trigger on changes inside app/ or CI configuration files. This avoids unnecessary pipeline runs for documentation-only changes.
+
+f) Why cache go.sum-keyed inputs and not build outputs?
+
+Go modules are deterministic based on go.sum, so dependencies can be safely reused across runs. This makes module caching reliable.
+
+Build outputs, however, depend on environment state (OS, toolchain version, timestamps, compiler state), so caching them could lead to incorrect or inconsistent builds.
+
+g) What does fail-fast: false change in a matrix run?
+
+It ensures that all matrix jobs run to completion even if one fails. This is useful for diagnosing multiple environment failures in parallel.
+
+With fail-fast: true, the entire matrix stops at the first failure, which is useful when:
+
+* we want fast feedback
+* failures are expected to be identical across environments
+* CI cost or time is critical
+
+h) Cache security risk in GitHub Actions
+
+If untrusted pull requests can write to shared cache keys, they may poison the cache with malicious artifacts. Later trusted runs (e.g. on protected branches) could unknowingly reuse compromised cached data.
+
+GitHub mitigates this by:
+
+* separating cache scopes between branches/forks
+* restricting cache access based on workflow context
+* isolating pull request caches from protected branch caches
+
+This prevents a PR from influencing production CI indirectly through cache injection.
