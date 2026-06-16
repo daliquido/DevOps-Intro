@@ -1,7 +1,6 @@
 # Lab 1 submission
 
 
-
 TASK 1 - QUICKNOTES 
 
  * [new tag]         v0.0.1        -> v0.0.1
@@ -43,7 +42,6 @@ TEMPLATES EXISTS
 i@is-MacBook-Air DevOps-Intro % ls .github/pull_request_template.md
 .github/pull_request_template.md
 i@is-MacBook-Air DevOps-Intro % 
-
 TASK 3
 COURSE REPO STARRED
 SIMPLE CONTAINER ALLOW
@@ -51,9 +49,10 @@ SIMPLE CONTAINER ALLOW
 EVERYONE FOLLOWED
 
 ## GitHub Community
-
 Starring repositories helps developers bookmark useful projects and signals interest and trust in open-source work. It also increases visibility for maintainers and contributes to project growth.
-Í
+
+
+Following developers helps me track activity, discover new tools, and stay connected with peers for collaboration in future projects and team environments.
 Following developers helps me track activity, discover new tools, and stay connected with peers for collaboration in future projects and team environments.
 
 BONUS
@@ -65,4 +64,6 @@ remote: - Commits must have verified signatures.
 
 REFLECTION
 Branch protection would have prevented unsafe or unreviewed changes from reaching production. Signed commits ensure authenticity of changes and prevent unauthorized or tampered code. Together, these controls enforce accountability and reduce risk in deployment pipelines. In a system like Knight Capital, this would have prevented direct faulty deployments.
+
+main
 
