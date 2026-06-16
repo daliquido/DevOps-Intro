@@ -1,0 +1,12 @@
+17:11:59.982642 IP6 localhost.56415 > localhost.http-alt: Flags [S], seq 3104254016, win 65535, options [mss 16324,nop,wscale 6,nop,nop,TS val 1761225022 ecr 0,sackOK,eol], length 0
+17:11:59.982757 IP6 localhost.http-alt > localhost.56415: Flags [S.], seq 1089114860, ack 3104254017, win 65535, options [mss 16324,nop,wscale 6,nop,nop,TS val 789345754 ecr 1761225022,sackOK,eol], length 0
+17:11:59.982783 IP6 localhost.56415 > localhost.http-alt: Flags [.], ack 1, win 6372, options [nop,nop,TS val 1761225022 ecr 789345754], length 0
+17:11:59.982800 IP6 localhost.http-alt > localhost.56415: Flags [.], ack 1, win 6372, options [nop,nop,TS val 789345754 ecr 1761225022], length 0
+17:11:59.982897 IP6 localhost.56415 > localhost.http-alt: Flags [P.], seq 1:175, ack 1, win 6372, options [nop,nop,TS val 1761225022 ecr 789345754], length 174: HTTP: POST /notes HTTP/1.1
+17:11:59.982922 IP6 localhost.http-alt > localhost.56415: Flags [.], ack 175, win 6370, options [nop,nop,TS val 789345754 ecr 1761225022], length 0
+17:12:00.003171 IP6 localhost.http-alt > localhost.56415: Flags [P.], seq 1:204, ack 175, win 6370, options [nop,nop,TS val 789345774 ecr 1761225022], length 203: HTTP: HTTP/1.1 201 Created
+17:12:00.003236 IP6 localhost.56415 > localhost.http-alt: Flags [.], ack 204, win 6369, options [nop,nop,TS val 1761225042 ecr 789345774], length 0
+17:12:00.003357 IP6 localhost.56415 > localhost.http-alt: Flags [F.], seq 175, ack 204, win 6369, options [nop,nop,TS val 1761225043 ecr 789345774], length 0
+17:12:00.003393 IP6 localhost.http-alt > localhost.56415: Flags [.], ack 176, win 6370, options [nop,nop,TS val 789345775 ecr 1761225043], length 0
+17:12:00.003407 IP6 localhost.http-alt > localhost.56415: Flags [F.], seq 204, ack 176, win 6370, options [nop,nop,TS val 789345775 ecr 1761225043], length 0
+17:12:00.003454 IP6 localhost.56415 > localhost.http-alt: Flags [.], ack 205, win 6369, options [nop,nop,TS val 1761225043 ecr 789345775], length 0
