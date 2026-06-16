@@ -3,14 +3,8 @@ name: CI
 on:
   push:
     branches: [main]
-    paths:
-      - "app/**"
-      - ".github/workflows/**"
   pull_request:
     branches: [main]
-    paths:
-      - "app/**"
-      - ".github/workflows/**"
 
 permissions:
   contents: read
@@ -20,19 +14,13 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: read
-    strategy:
-      fail-fast: false
-      matrix:
-        go-version: ["1.23", "1.24"]
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1
 
       - uses: actions/setup-go@v5
         with:
-          go-version: ${{ matrix.go-version }}
-          cache: true
-          cache-dependency-path: app/go.sum
+          go-version: "1.24"
 
       - name: Vet
         working-directory: app
@@ -42,19 +30,13 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: read
-    strategy:
-      fail-fast: false
-      matrix:
-        go-version: ["1.23", "1.24"]
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1
 
       - uses: actions/setup-go@v5
         with:
-          go-version: ${{ matrix.go-version }}
-          cache: true
-          cache-dependency-path: app/go.sum
+          go-version: "1.24"
 
       - name: Test
         working-directory: app
@@ -71,8 +53,6 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.24"
-          cache: true
-          cache-dependency-path: app/go.sum
 
       - name: Install golangci-lint v2.5.0
         working-directory: app
