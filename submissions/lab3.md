@@ -9,19 +9,36 @@ Link to successful CI run:
 PASTE YOUR PR LINK HERE (Checks must be green)
 
 Example:
-https://github.com/daliquido/DevOps-Intro/pull/
+https://github.com/daliquido/DevOps-Intro/pull/1
 
 
 ## 3. Failed Run (1.5 proof)
+## 1.5 Failed CI (Red Check)
 
-### Failed CI run:
-PASTE LINK OR SCREENSHOT HERE
+![Failed CI](error.png)
+
+---
+
+## Fix commit (Green Check)
+
+![Fix](fixed.png)
+
+---
+
+## Code change that broke CI
+
+![Broken change](changed code .png)
+
+---
+
+## Branch Protection
+
+![Branch protection](branch protection.png)
 
 ### Fix commit:
 COMMIT HASH OR MESSAGE:
 fix: restore passing tests
 
----
 
 ## 4. Branch Protection Screenshot
 PASTE SCREENSHOT OF:
